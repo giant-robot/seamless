@@ -1,0 +1,11 @@
+{
+  "name": "seamless",
+  "version": "1.0.0",
+  "description": "Infinite loading for cranky technicians.",
+  "main": "gruntfile.js",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "*",
+    "grunt-contrib-uglify": "^1.0.1"
+  }
+}
