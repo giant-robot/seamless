@@ -214,7 +214,7 @@ If you haven't gotten the picture already, here is an example to get you started
 
 **Server response**
 
-```json
+```js
 {
 	status: 'success',
 	items: [
