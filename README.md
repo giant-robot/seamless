@@ -185,14 +185,14 @@ The offset at which the transition callback is triggered. Again, take a look at 
 
 
 
-###Methods
+### Methods
 
 **init()**  
 When an instance is created, it is in stand-by mode; no bindings to DOM elements or events are actually made (ie, no side-effects).
 
 In order for the magic to happen, you have to explicitly "initialize" it, by calling `init()` on your Seamless instance of choice.
 
-##Examples
+## Examples
 
 If you haven't gotten the picture already, here is an example to get you started.
 
