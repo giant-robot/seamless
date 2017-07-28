@@ -1,10 +1,10 @@
-#Introductions
+# Introductions
 
 Seamless is an infinite loading script based on the excellent [Waypoints](https://github.com/imakewebthings/waypoints) library. 
 
 It is simple, sensible, completely customizable and your mom will approve!
 
-##Installation
+## Installation
 
 Seamless requires [jQuery](http://jquery.com/download/) and [Waypoints](https://github.com/imakewebthings/waypoints).
 
@@ -15,7 +15,7 @@ As soon you've got those down, you can manually grab the [latest release](https:
 You can then include `dist/seamless.min.js` and start cracking.
 
 
-##Usage
+## Usage
 You start by creating instances of the globally exposed class `Seamless`:
 
 ```js
@@ -28,7 +28,7 @@ and "initialize" these instances when you fancy:
 infiniteScroller.init();
 ```
 
-###Options
+### Options
 
 When you're creating a new instance, you can define its options in the form of a JavaScript object.
 
