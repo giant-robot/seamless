@@ -2,10 +2,14 @@
   "name": "seamless",
   "version": "1.0.0",
   "description": "Infinite loading for cranky technicians.",
-  "main": "gruntfile.js",
+  "main": "dist/seamless.js",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-cli": "*",
     "grunt-contrib-uglify": "^1.0.1"
+  },
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "waypoints": "^4.0.1"
   }
 }
