@@ -48,9 +48,11 @@ module.exports = {
         test: /\.min\.js$/,
         sourceMap: !isProd,
         uglifyOptions: {
-          compress: isProd,
+          beautify: isProd,
+          compress: {
+            drop_console: isProd
+          },
           ecma: 6,
-          mangle: true
         }
       })
     ]
