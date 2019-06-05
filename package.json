@@ -1,6 +1,5 @@
 {
   "name": "seamless",
-  "version": "1.0.0",
   "description": "Infinite loading for cranky technicians.",
   "main": "dist/seamless.js",
   "unpkg": "dist/nudge.min.js",
