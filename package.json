@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Infinite loading for cranky technicians.",
   "main": "dist/seamless.js",
+  "unpkg": "dist/nudge.min.js",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-cli": "*",
@@ -11,5 +12,12 @@
   "dependencies": {
     "jquery": ">=3.4.0",
     "waypoints": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giant-robot/seamless.git"
+  },
+  "bugs": {
+    "url": "https://github.com/giant-robot/seamless/issues"
   }
 }
