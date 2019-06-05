@@ -1,6 +1,7 @@
 {
   "name": "seamless-js",
   "description": "Infinite loading for cranky technicians.",
+  "version": "1.0.2",
   "main": "dist/seamless.js",
   "unpkg": "dist/seamless.min.js",
   "devDependencies": {
