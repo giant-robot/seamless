@@ -2,7 +2,7 @@
   "name": "seamless",
   "description": "Infinite loading for cranky technicians.",
   "main": "dist/seamless.js",
-  "unpkg": "dist/nudge.min.js",
+  "unpkg": "dist/seamless.min.js",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-cli": "*",
