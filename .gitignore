@@ -1,9 +1,15 @@
-# IntelliJ project files
-.idea
-*.iml
-out
-gen
+## OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Libraries
+## Libraries
 bower_components
 node_modules
+
+## Project files
+.idea
