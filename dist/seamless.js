@@ -16,6 +16,7 @@
         },
         renderTemplate: function(template, data) {},
         onAppend: function($element) {},
+        onComplete: function(cycle, $elements) {},
         request: {
             paged: !1,
             offsetParam: "offset",
@@ -58,7 +59,9 @@
     }, Seamless.prototype.loadItems = function() {
         var _this = this;
         this.$container.addClass(this.config.loadingClass), this.getItems(function(items) {
-            items.length > 0 && (_this.append(items), _this.trackLoadNewItems()), _this.$container.removeClass(_this.config.loadingClass), 
+            var elements = [];
+            items.length > 0 && (elements = _this.append(items), _this.trackLoadNewItems()), 
+            _this.config.onComplete(_this.cycle, $(elements)), _this.$container.removeClass(_this.config.loadingClass), 
             _this.cycle++;
         });
     }, Seamless.prototype.getItems = function(onResolveCallback) {
@@ -81,9 +84,12 @@
             _this.items = items;
         }), request.complete.push(callback), $.ajax(request);
     }, Seamless.prototype.append = function(items) {
+        var elements = [];
         if (items.length > 0) for (var i = 0; i < items.length; i++) {
             var $element = $(this.config.renderTemplate(this.template, items[i]));
-            this.$container.append($element), this.config.onAppend($element), this.config.trackItemTransitions && this.trackItemTransitions($element);
+            this.$container.append($element), this.config.onAppend($element), this.config.trackItemTransitions && this.trackItemTransitions($element), 
+            elements.push($element);
         }
+        return elements;
     }, void (window.Seamless = Seamless));
 }(jQuery);

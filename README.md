@@ -137,6 +137,20 @@ onAppend: function($element) {
 }
 ```
 
+**onComplete** `Function` `default: $.noop()`
+
+A callback to execute right after Seamless has appended all items to the container. 
+`this` is the Seamless instance.
+The callback is passed two parameters: the Seamless cycle number (starts at `0`) and a jQuery collection of all jQuery objects that have been appended.
+
+For example, here is another way to set your browser on fire:
+
+```js
+onComplete: function(cycle, $elements) {
+	$elements.hide();
+}
+```
+
 **dripFeed** `Boolean` `default: false`
 
 If the issued request returns more than one items, the `dripFeed` setting allows you to control if they will be appended one-by-one or all-at-once.

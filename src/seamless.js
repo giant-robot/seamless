@@ -49,6 +49,8 @@
         },
         onAppend: function($element) {
         },
+        onComplete: function(cycle, $elements) {
+        },
         request: {
             paged: false,
             offsetParam: 'offset',
@@ -163,12 +165,15 @@
 
         this.getItems(function(items) {
 
+            var elements = [];
+
             if (items.length > 0)
             {
-                _this.append(items);
+                elements = _this.append(items);
                 _this.trackLoadNewItems();
             }
 
+            _this.config.onComplete(_this.cycle, $(elements));
             _this.$container.removeClass(_this.config.loadingClass);
             _this.cycle++;
         });
@@ -289,12 +294,16 @@
      * Each render result is then appended to the container.
      *
      * @param {Array} items
+     *
+     * @returns {Array}
      */
     Seamless.prototype.append = function (items) {
         console.log('appending...');
 
-        if (items.length > 0) {
+        var elements = [];
 
+        if (items.length > 0)
+        {
             for (var i = 0; i < items.length; i++)
             {
                 var $element = $(this.config.renderTemplate(this.template, items[i]));
@@ -305,8 +314,12 @@
                 {
                     this.trackItemTransitions($element);
                 }
+
+                elements.push($element);
             }
         }
+
+        return elements;
     };
 
     /**
