@@ -48,7 +48,7 @@
         });
     }, Seamless.prototype.trackItemTransitions = function($item) {
         var _this = this;
-        $item.waypoint({
+        $item.filter(this.config.itemSelector).waypoint({
             group: "item_transitions",
             handler: function(direction) {
                 var from = "down" === direction ? this.previous() : this, to = "down" === direction ? this : this.previous(), fromElement = from ? from.element : null, toElement = to ? to.element : null;

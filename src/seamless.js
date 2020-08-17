@@ -137,7 +137,7 @@
 
         var _this = this;
 
-        $item.waypoint({
+        $item.filter(this.config.itemSelector).waypoint({
             group: 'item_transitions',
             handler: function (direction) {
                 var from = (direction === 'down') ? this.previous() : this;
